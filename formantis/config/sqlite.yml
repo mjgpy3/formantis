@@ -1,0 +1,20 @@
+Default: &defaults
+  database: formantis.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: formantis_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: formantis_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: formantis_production.sqlite3
+  poolsize: 100
+  <<: *defaults
